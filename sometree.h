@@ -20,11 +20,13 @@
 //             |
 //             0
 
+#pragma pack(push,1)
 struct NODE
 {
   struct NODE*right,*bottom;
   char value;
 };
+#pragma pack(pop)
 
 struct NODE*createnode(char _value)
 {
