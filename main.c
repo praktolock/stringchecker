@@ -15,7 +15,8 @@ int main(int argc, char**argv)
   while(1)
   {
     printf(">");
-    scanf("%s", instring);
+    if(scanf("%s", instring)==EOF)
+      break;
     if(!strcmp(instring, "exit"))
       break;
     if(checkstring(tree, instring))
