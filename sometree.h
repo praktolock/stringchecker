@@ -32,6 +32,7 @@ struct NODE*createnode(char _value)
   ret->right=NULL;
   ret->bottom=NULL;
   ret->value=_value;
+  return(ret);
 }
 
 void deletetree(struct NODE*_node)
