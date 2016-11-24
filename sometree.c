@@ -110,14 +110,12 @@ int loadtree(char*filename, struct NODE**_top) //fill tree with strings from fil
 
 void printtree(struct NODE*_node, int lvl)
 {
-    static char tmpstr[2]={0, 0};
     if(!_node)return;
     int i=0;
     while(lvl!=i++)
-        printf(" ");
-    tmpstr[0]=_node->value;
-    if(!_node->value)tmpstr[0]='0';
-    printf("%s\n", tmpstr);
+        putchar(' ');
+    putchar(_node->value?_node->value:'0');
+    putchar('\n');
     printtree(_node->bottom, lvl+1);
     printtree(_node->right,    lvl);
 }
