@@ -11,9 +11,6 @@ int main(int argc, char**argv)
     struct NODE*tree=NULL;
     if(!loadtree(argv[1], &tree))
         return(0);
-
-    //printtree(tree, 0);
-
     while(1)
     {
       if(!fgets(instring, INSTRINGLENGTH, stdin))
